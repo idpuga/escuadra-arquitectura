@@ -233,8 +233,13 @@ h3 { margin-bottom: 10px; font-size: 1.18rem; }
 .process p { margin: 0; color: var(--muted); font-size: .94rem; }
 
 .about { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 8vw, 140px); align-items: center; }
-.about__signature { padding: 40px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
-.about__signature p { max-width: 420px; margin-bottom: 0; color: var(--muted); font-size: 1.05rem; }
+.about__profile { width: min(100%, 430px); justify-self: end; }
+.about__portrait { margin: 0 0 22px; aspect-ratio: 3 / 4; overflow: hidden; background: var(--warm); }
+.about__portrait img { width: 100%; height: 100%; object-fit: cover; }
+.about__signature { padding: 24px 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
+.about__signature h3 { margin-bottom: 2px; }
+.about__role { margin-bottom: 18px; color: var(--moss); font-size: .76rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+.about__signature p:not(.about__role) { max-width: 420px; margin-bottom: 0; color: var(--muted); font-size: 1.05rem; }
 
 .contact {
   max-width: 700px;
@@ -277,6 +282,7 @@ h3 { margin-bottom: 10px; font-size: 1.18rem; }
   .hero__visual figure:last-child img { min-height: 310px; }
   .section { padding: 74px 0; }
   .projects { grid-template-columns: 1fr; gap: 34px; }
+  .about__profile { justify-self: start; }
   .project-card__image { aspect-ratio: 1.08; }
   .feature__image { min-height: 430px; }
   .feature__copy { padding: 58px 24px; }
